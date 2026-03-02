@@ -2,6 +2,7 @@
 
 import { ReactNode, useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 type InitialLoaderProps = {
   children: ReactNode;
@@ -10,6 +11,7 @@ type InitialLoaderProps = {
 const LOADER_DURATION = 3400;
 
 export function InitialLoader({ children }: InitialLoaderProps) {
+  const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
   const [showLoader, setShowLoader] = useState(false);
 
@@ -41,8 +43,8 @@ export function InitialLoader({ children }: InitialLoaderProps) {
 
   useEffect(() => {
     setMounted(true);
-    setShowLoader(true);
-  }, []);
+    setShowLoader(pathname === "/");
+  }, [pathname]);
 
   useEffect(() => {
     if (!showLoader) {
@@ -64,6 +66,10 @@ export function InitialLoader({ children }: InitialLoaderProps) {
   }, [showLoader]);
 
   if (!mounted) {
+    return <>{children}</>;
+  }
+
+  if (pathname !== "/") {
     return <>{children}</>;
   }
 
