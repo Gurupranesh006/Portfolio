@@ -64,7 +64,7 @@ types/
 
 - Sticky blurred navbar with section anchors
 - Hero with branding, CTA buttons, and animated security console
-- First-load cinematic hacker-style loading scene
+- Cinematic hacker-style loading scene (home page only)
 - About + education highlights
 - Hobbies section
 - Skills card grid
@@ -76,6 +76,7 @@ types/
 - Writeups preview (coming soon)
 - Contact links + functional Formspree contact form
 - Footer
+- Vercel Speed Insights enabled
 
 ## Admin Backend (Projects / Writeups / Certifications)
 
@@ -88,7 +89,17 @@ This project now includes an admin backend with login and content management, su
   - Writeups
   - Certifications
 
+Dashboard capabilities:
+
+- Create new blocks
+- Edit existing blocks
+- Delete existing blocks
+- Writeup publish mode options:
+  - Coming soon
+  - Provide link
+
 Public sections automatically fetch this managed content via API routes.
+Homepage sections for Projects/Writeups/Certifications auto-sync with backend changes (polling + focus refresh).
 
 ### Required Environment Variables
 
