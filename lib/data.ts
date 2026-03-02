@@ -33,7 +33,7 @@ export const skills: SkillCategory[] = [
   },
   {
     title: "Technical",
-    skills: ["Python", "JavaScript", "SQL", "Linux", "Git", "PostgreSQL"]
+    skills: ["Python", "Java", "C", "SQL", "Linux", "Git", "PostgreSQL"]
   },
   {
     title: "AI / ML",
