@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -27,8 +28,9 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/70 backdrop-blur-lg">
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="#" className="text-lg font-bold tracking-wide text-foreground">
-          Veralyx
+        <Link href="#" className="flex items-center gap-2 text-lg font-bold tracking-wide text-foreground">
+          <Image src="/logo.png" alt="Veralyx logo" width={28} height={28} className="rounded-md" />
+          <span>Veralyx</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => (
