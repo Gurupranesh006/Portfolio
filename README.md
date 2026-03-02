@@ -96,6 +96,12 @@ Build:
 npm run build
 ```
 
+If you face Windows-specific readlink issues locally, use:
+
+```bash
+npm run build:win
+```
+
 Start production server:
 
 ```bash
@@ -108,7 +114,7 @@ This repo includes a small compatibility preload script for specific Windows/Nod
 
 - `scripts/readlink-compat.cjs`
 
-It is already wired into the build script in `package.json`.
+It is used by the `build:win` script in `package.json`.
 
 ## Personalization Checklist
 
