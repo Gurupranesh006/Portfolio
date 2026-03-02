@@ -33,15 +33,18 @@ app/
 components/
   navbar.tsx
   hero.tsx
+  hobbies.tsx
   about.tsx
   skills.tsx
   projects.tsx
+  labs.tsx
   certifications.tsx
   experience.tsx
   ctf.tsx
   blog-preview.tsx
   contact.tsx
   footer.tsx
+  initial-loader.tsx
 
 lib/
   data.ts
@@ -57,14 +60,17 @@ types/
 ## Sections Included
 
 - Sticky blurred navbar with section anchors
-- Hero with branding, CTA buttons, and profile image
-- About summary
+- Hero with branding, CTA buttons, and animated security console
+- First-load cinematic hacker-style loading scene
+- About + education highlights
+- Hobbies section
 - Skills card grid
 - Projects card grid with GitHub links
+- Labs section + `/labs` coming-soon route
 - CTF/Platform section (HackTheBox + TryHackMe)
 - Experience timeline-style layout
 - Certifications badge list
-- Blog preview cards with placeholder routes
+- Writeups preview (coming soon)
 - Contact links + functional Formspree contact form
 - Footer
 
@@ -119,6 +125,12 @@ The contact form is wired to Formspree so you can receive and view viewer messag
 NEXT_PUBLIC_FORMSPREE_ENDPOINT=https://formspree.io/f/your-form-id
 ```
 
+This project currently includes a fallback endpoint in code:
+
+- `https://formspree.io/f/mkovlnab`
+
+Using environment variables is still recommended for long-term configuration.
+
 3. Redeploy after setting the variable on Vercel.
 
 You can view all incoming messages in your Formspree dashboard.
@@ -135,7 +147,6 @@ It is used by the `build:win` script in `package.json`.
 
 Before deploying, update the following:
 
-- `public/profile.jpg` with your final portrait
 - Contact and platform links in `lib/data.ts`
 - Email in `lib/data.ts`
 - Metadata base URL in `app/layout.tsx`
