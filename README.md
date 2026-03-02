@@ -186,4 +186,4 @@ For best Lighthouse scores, ensure final production image assets are compressed 
 
 ---
 
-Built for Gurupranesh J Kulkarni — Cybersecurity Student @ RVCE (CSE-CY'28)
+Built Gurupranesh J Kulkarni — Cybersecurity Student @ RVCE (CSE-CY'28)
