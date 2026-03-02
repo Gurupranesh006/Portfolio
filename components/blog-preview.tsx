@@ -35,6 +35,14 @@ export function BlogPreview() {
     };
 
     load();
+
+    const intervalId = window.setInterval(load, 5000);
+    window.addEventListener("focus", load);
+
+    return () => {
+      window.clearInterval(intervalId);
+      window.removeEventListener("focus", load);
+    };
   }, []);
 
   return (

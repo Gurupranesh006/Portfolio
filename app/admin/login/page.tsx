@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -39,6 +40,13 @@ export default function AdminLoginPage() {
     <main className="section-shell flex min-h-[70vh] items-center justify-center">
       <Card className="w-full max-w-md border-border/80 bg-card/80">
         <CardHeader>
+          <div className="flex justify-end">
+            <Link href="/">
+              <Button variant="outline" size="sm">
+                Home
+              </Button>
+            </Link>
+          </div>
           <CardTitle className="text-2xl">Admin Login</CardTitle>
         </CardHeader>
         <CardContent>
