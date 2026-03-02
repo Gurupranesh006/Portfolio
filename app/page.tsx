@@ -6,6 +6,8 @@ import { CTF } from "@/components/ctf";
 import { Experience } from "@/components/experience";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
+import { Hobbies } from "@/components/hobbies";
+import { Labs } from "@/components/labs";
 import { Navbar } from "@/components/navbar";
 import { Projects } from "@/components/projects";
 import { Skills } from "@/components/skills";
@@ -20,8 +22,10 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <Hobbies />
       <Skills />
       <Projects />
+      <Labs />
       <CTF />
       <Experience />
       <Certifications />

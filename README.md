@@ -65,7 +65,7 @@ types/
 - Experience timeline-style layout
 - Certifications badge list
 - Blog preview cards with placeholder routes
-- Contact links + frontend-only contact form
+- Contact links + functional Formspree contact form
 - Footer
 
 ## Local Development
@@ -108,6 +108,21 @@ Start production server:
 npm run start
 ```
 
+## Contact Form Setup (View Messages)
+
+The contact form is wired to Formspree so you can receive and view viewer messages.
+
+1. Create a free form at Formspree and copy your endpoint (`https://formspree.io/f/...`).
+2. Add environment variable in local `.env.local` and in Vercel:
+
+```env
+NEXT_PUBLIC_FORMSPREE_ENDPOINT=https://formspree.io/f/your-form-id
+```
+
+3. Redeploy after setting the variable on Vercel.
+
+You can view all incoming messages in your Formspree dashboard.
+
 ## Notes for Windows Environment
 
 This repo includes a small compatibility preload script for specific Windows/Node readlink behavior:
@@ -123,7 +138,6 @@ Before deploying, update the following:
 - `public/profile.jpg` with your final portrait
 - Contact and platform links in `lib/data.ts`
 - Email in `lib/data.ts`
-- Resume file (add `public/resume.pdf`)
 - Metadata base URL in `app/layout.tsx`
 
 ## GitHub + Vercel Deployment

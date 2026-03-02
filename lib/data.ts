@@ -10,8 +10,10 @@ import {
 
 export const navItems: NavItem[] = [
   { label: "About", href: "#about" },
+  { label: "Hobbies", href: "#hobbies" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
+  { label: "Labs", href: "#labs" },
   { label: "CTF", href: "#ctf" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" }
@@ -94,7 +96,7 @@ export const platforms: PlatformCard[] = [
       "Red team workflows and adversary simulation",
       "Machine ownership progress tracking"
     ],
-    link: "https://www.hackthebox.com"
+    link: "https://app.hackthebox.com/public/users/1197641"
   },
   {
     title: "TryHackMe",
@@ -103,7 +105,7 @@ export const platforms: PlatformCard[] = [
       "Blue/Red fundamentals and practical scenarios",
       "Hands-on certifications and guided rooms"
     ],
-    link: "https://tryhackme.com"
+    link: "https://tryhackme.com/p/Velaryx"
   }
 ];
 
@@ -111,23 +113,23 @@ export const experiences: ExperienceItem[] = [
   {
     role: "AI Intern",
     org: "Emberquest",
-    period: "2025 - Present",
+    period: "2024 (Completed)",
     summary:
-      "Building ML-backed workflows for security-oriented use cases and applied automation tasks."
+      "Built ML-backed workflows for security-oriented use cases and applied automation tasks."
   },
   {
     role: "Member",
     org: "Accelerate RVCE",
-    period: "2024 - Present",
+    period: "2025 - Present",
     summary:
-      "Contributing to technical initiatives and peer-led engineering activities."
+      "Currently contributing to technical initiatives and peer-led engineering activities."
   },
   {
     role: "Member",
     org: "Rotaract RVCE",
-    period: "2024 - Present",
+    period: "2025 - Present",
     summary:
-      "Participating in community-facing projects with structured team execution."
+      "Currently participating in community-facing projects with structured team execution."
   }
 ];
 
@@ -154,9 +156,16 @@ export const blogs: BlogItem[] = [
 ];
 
 export const contactLinks: ContactLink[] = [
-  { label: "Email", href: "mailto:gurupranesh@example.com" },
-  { label: "LinkedIn", href: "https://linkedin.com" },
+  { label: "Email", href: "mailto:kulkarnigurupranesh1@gmail.com" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/gurupranesh-j-kulkarni-327708362/"
+  },
   { label: "GitHub", href: "https://github.com/Gurupranesh006" },
-  { label: "HackTheBox", href: "https://www.hackthebox.com" },
-  { label: "TryHackMe", href: "https://tryhackme.com" }
+  {
+    label: "HackTheBox",
+    href: "https://app.hackthebox.com/public/users/1197641"
+  },
+  { label: "TryHackMe", href: "https://tryhackme.com/p/Velaryx" },
+  { label: "X", href: "https://x.com/Velaryx__" }
 ];

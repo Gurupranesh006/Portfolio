@@ -28,7 +28,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/70 backdrop-blur-lg">
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="#" className="text-lg font-bold tracking-wide text-foreground">
-          GK
+          Veralyx
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => (
