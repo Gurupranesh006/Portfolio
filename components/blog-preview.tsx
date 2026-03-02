@@ -1,15 +1,17 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { Clock3 } from "lucide-react";
 import { blogs } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export function BlogPreview() {
   return (
     <section id="blog" className="section-shell">
-      <h2 className="mb-8 text-3xl font-bold sm:text-4xl">Blog Preview</h2>
+      <div className="mb-8 flex items-end justify-between gap-4">
+        <h2 className="text-3xl font-bold sm:text-4xl">Writeups</h2>
+        <p className="text-sm text-muted-foreground">Publishing soon</p>
+      </div>
       <div className="grid gap-6 md:grid-cols-3">
         {blogs.map((blog, idx) => (
           <motion.div
@@ -19,16 +21,16 @@ export function BlogPreview() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.35, delay: idx * 0.05 }}
           >
-            <Link href={blog.href}>
-              <Card className="h-full transition-colors hover:border-primary/50">
-                <CardHeader>
-                  <CardTitle className="text-lg">{blog.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="text-sm text-muted-foreground">
-                  Read article <ArrowUpRight className="ml-1 inline" size={15} />
-                </CardContent>
-              </Card>
-            </Link>
+            <Card className="h-full border-border/80 transition-all duration-300 hover:border-primary/50">
+              <CardHeader>
+                <CardTitle className="text-lg">{blog.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-muted-foreground">
+                <span className="inline-flex items-center rounded-full border border-border/80 bg-muted/40 px-3 py-1">
+                  <Clock3 className="mr-2" size={14} /> Coming soon
+                </span>
+              </CardContent>
+            </Card>
           </motion.div>
         ))}
       </div>

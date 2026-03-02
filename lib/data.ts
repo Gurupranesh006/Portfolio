@@ -45,40 +45,44 @@ export const skills: SkillCategory[] = [
 
 export const projects: Project[] = [
   {
-    title: "Active Directory Lab Setup",
+    title: "AI-based-IDS",
     description:
-      "Engineered an AD lab with attacker and victim machines to simulate post-exploitation paths and privilege escalation chains.",
-    technologies: ["Windows Server", "PowerShell", "BloodHound", "Kali Linux"],
+      "AI-driven Network Intrusion Detection System using CNN and LSTM models on UNSW-NB15, with a web dashboard for real-time threat visibility.",
+    technologies: ["Python", "TensorFlow", "LSTM", "CNN", "UNSW-NB15"],
     learning:
-      "Mapped attack paths and hardened weak privilege boundaries in domain environments.",
-    githubUrl: "https://github.com"
+      "Engineered end-to-end detection pipelines and evaluated model behavior across binary and multi-class attack classification.",
+    githubUrl: "https://github.com/Gurupranesh006/AI-based-IDS",
+    status: "Research Project"
   },
   {
-    title: "Custom Netcat Tool (Python)",
+    title: "AI-Based-Mini-VCS",
     description:
-      "Built a lightweight Python utility for secure listener/client interactions during internal red team simulation workflows.",
-    technologies: ["Python", "Sockets", "CLI"],
+      "AI-assisted mini version control system built with DAG commit architecture, content-addressable storage, commit intelligence, and offline fallback.",
+    technologies: ["Python", "DAG", "Version Control", "AI Security Review"],
     learning:
-      "Improved low-level understanding of network I/O, packet flow, and operational scripting.",
-    githubUrl: "https://github.com"
+      "Strengthened systems design around immutable object storage, commit lineage, and secure developer workflows.",
+    githubUrl: "https://github.com/Gurupranesh006/AI-Based-Mini-VCS",
+    status: "Core Build"
   },
   {
-    title: "Web App VAPT Sample Assessment",
+    title: "Assembly-based-Secure-Data-Transmitor",
     description:
-      "Performed a structured VAPT workflow against a test web application and documented findings with risk-prioritized recommendations.",
-    technologies: ["Burp Suite", "OWASP Top 10", "Nmap"],
+      "Low-level secure data transmission implementation in Assembly, focused on controlled data movement and protocol-level behavior.",
+    technologies: ["Assembly", "Secure Data Transfer", "Systems Programming"],
     learning:
-      "Strengthened reporting discipline and remediation-focused offensive testing.",
-    githubUrl: "https://github.com"
+      "Gained deep control over memory-level operations and precision in security-sensitive instruction flows.",
+    githubUrl: "https://github.com/Gurupranesh006/Assembly-based-Secure-Data-Transmitor",
+    status: "Systems Security"
   },
   {
-    title: "AI-based Intrusion Detection Mini Project",
+    title: "Portfolio",
     description:
-      "Trained a small anomaly-detection pipeline for suspicious traffic classification using curated network telemetry.",
-    technologies: ["Python", "Scikit-learn", "Pandas"],
+      "Production-ready cybersecurity portfolio engineered with Next.js 14, TypeScript, Tailwind, and subtle motion-driven UX.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     learning:
-      "Bridged detection engineering with model behavior analysis for security use-cases.",
-    githubUrl: "https://github.com"
+      "Translated personal technical narrative into a fast, scalable, and deployment-ready web experience.",
+    githubUrl: "https://github.com/Gurupranesh006/Portfolio",
+    status: "Live Showcase"
   }
 ];
 
@@ -137,22 +141,22 @@ export const certifications: string[] = [
 export const blogs: BlogItem[] = [
   {
     title: "Understanding Active Directory Attack Chains",
-    href: "/blog-active-directory-attack-chains"
+    href: "#"
   },
   {
     title: "Methodology for Solving HTB Machines",
-    href: "/blog-htb-methodology"
+    href: "#"
   },
   {
     title: "AI in Offensive Security",
-    href: "/blog-ai-offensive-security"
+    href: "#"
   }
 ];
 
 export const contactLinks: ContactLink[] = [
   { label: "Email", href: "mailto:gurupranesh@example.com" },
   { label: "LinkedIn", href: "https://linkedin.com" },
-  { label: "GitHub", href: "https://github.com" },
+  { label: "GitHub", href: "https://github.com/Gurupranesh006" },
   { label: "HackTheBox", href: "https://www.hackthebox.com" },
   { label: "TryHackMe", href: "https://tryhackme.com" }
 ];

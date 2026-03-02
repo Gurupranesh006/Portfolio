@@ -45,6 +45,9 @@ html {
 
 body {
   @apply bg-background text-foreground antialiased;
+  background-image:
+    radial-gradient(circle at 20% 10%, hsl(var(--primary) / 0.08) 0%, transparent 30%),
+    radial-gradient(circle at 80% 0%, hsl(var(--secondary) / 0.06) 0%, transparent 24%);
 }
 
 .section-shell {

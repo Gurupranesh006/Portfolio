@@ -14,6 +14,7 @@ export type Project = {
   technologies: string[];
   learning: string;
   githubUrl: string;
+  status?: string;
 };
 
 export type PlatformCard = {
