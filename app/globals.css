@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 222 47% 11%;
+  --foreground: 210 40% 98%;
+  --card: 222 47% 14%;
+  --card-foreground: 210 40% 98%;
+  --primary: 152 75% 43%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 260 55% 60%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217 33% 20%;
+  --muted-foreground: 215 20% 75%;
+  --border: 217 33% 25%;
+  --input: 217 33% 23%;
+  --ring: 152 75% 43%;
+  --radius: 0.75rem;
+}
+
+.light {
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --primary: 152 70% 35%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 260 55% 65%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 42%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 152 70% 35%;
+}
+
+* {
+  @apply border-border;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 lg:px-8;
+}
