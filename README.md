@@ -47,6 +47,9 @@ components/
   initial-loader.tsx
 
 lib/
+  auth.ts
+  db.ts
+  models.ts
   data.ts
   utils.ts
 
@@ -73,6 +76,36 @@ types/
 - Writeups preview (coming soon)
 - Contact links + functional Formspree contact form
 - Footer
+
+## Admin Backend (Projects / Writeups / Certifications)
+
+This project now includes an admin backend with login and content management, suitable for Vercel deployment.
+
+- Admin login page: `/admin/login`
+- Admin dashboard: `/admin/dashboard`
+- Manage content blocks for:
+  - Projects
+  - Writeups
+  - Certifications
+
+Public sections automatically fetch this managed content via API routes.
+
+### Required Environment Variables
+
+Set these in `.env.local` and in your Vercel Project Settings:
+
+```env
+MONGODB_URI=mongodb+srv://<user>:<password>@<cluster>/<database>?retryWrites=true&w=majority
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD=change-this-password
+ADMIN_JWT_SECRET=change-this-super-long-random-secret
+NEXT_PUBLIC_FORMSPREE_ENDPOINT=https://formspree.io/f/mkovlnab
+```
+
+Recommended deployment stack:
+
+- MongoDB Atlas (free tier) for database
+- Vercel for hosting
 
 ## Local Development
 
@@ -186,4 +219,4 @@ For best Lighthouse scores, ensure final production image assets are compressed 
 
 ---
 
-Built Gurupranesh J Kulkarni — Cybersecurity Student @ RVCE (CSE-CY'28)
+Built for Gurupranesh J Kulkarni — Cybersecurity Student @ RVCE (CSE-CY'28)

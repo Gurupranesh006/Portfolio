@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Github } from "lucide-react";
 import { projects } from "@/lib/data";
@@ -14,7 +15,37 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
+type ProjectItem = {
+  _id?: string;
+  title: string;
+  description: string;
+  technologies: string[];
+  learning: string;
+  githubUrl: string;
+  status?: string;
+};
+
 export function Projects() {
+  const [items, setItems] = useState<ProjectItem[]>(projects);
+
+  useEffect(() => {
+    const load = async () => {
+      try {
+        const response = await fetch("/api/public/projects", { cache: "no-store" });
+        if (!response.ok) {
+          return;
+        }
+        const data = (await response.json()) as ProjectItem[];
+        if (Array.isArray(data) && data.length > 0) {
+          setItems(data);
+        }
+      } catch {
+      }
+    };
+
+    load();
+  }, []);
+
   return (
     <section id="projects" className="section-shell">
       <div className="mb-8 flex items-end justify-between gap-4">
@@ -22,9 +53,9 @@ export function Projects() {
         <p className="text-sm text-muted-foreground">Selected builds from GitHub</p>
       </div>
       <div className="grid gap-6 md:grid-cols-2">
-        {projects.map((project, idx) => (
+        {items.map((project, idx) => (
           <motion.div
-            key={project.title}
+            key={project._id || project.title}
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
